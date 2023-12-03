@@ -6,7 +6,6 @@
 #include <stdexcept>
 #include <cctype>
 #include <map>
-#include <algorithm>
 
 #include "advent_support/fileio.h"
 
@@ -102,7 +101,7 @@ void partB(const std::string& filename) {
 }
 
 int32_t main(int argc, char* argv[]) {
-  // Check that the filename is provided
+  // Check that the filenames is provided
   if (argc != 3) {
     std::cerr << "Usage: " << argv[0] << " <filename A> <filename B>" << std::endl;
     return 1;
