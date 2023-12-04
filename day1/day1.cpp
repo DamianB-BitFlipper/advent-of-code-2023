@@ -97,7 +97,7 @@ void partB(const std::string& filename) {
     calibration_value += firstDigit * 10 + lastDigit;
   }
 
-  std::cout << "Part A: The calibration value is: " << calibration_value << std::endl;
+  std::cout << "Part B: The calibration value is: " << calibration_value << std::endl;
 }
 
 int32_t main(int argc, char* argv[]) {

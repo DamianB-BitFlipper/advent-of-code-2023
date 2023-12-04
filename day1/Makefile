@@ -1,4 +1,4 @@
-CXX = g++-8
+CXX = clang++
 CXXFLAGS = -I.. -Wall -Wextra -Wstrict-aliasing -std=c++2a -Weffc++ -g
 
 SRC_FILES = $(wildcard *.cpp)
