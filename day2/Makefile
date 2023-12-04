@@ -1,5 +1,5 @@
 CXX = g++-8
-CXXFLAGS = -I.. -Wall -Wextra -Wstrict-aliasing -std=c++2a -Weffc++
+CXXFLAGS = -I.. -Wall -Wextra -Wstrict-aliasing -std=c++2a -Weffc++ -g
 
 SRC_FILES = $(wildcard *.cpp)
 SRC_FILES_SUPPORT = $(wildcard ../advent_support/*.cpp)

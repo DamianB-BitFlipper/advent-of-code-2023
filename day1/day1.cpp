@@ -101,15 +101,15 @@ void partB(const std::string& filename) {
 }
 
 int32_t main(int argc, char* argv[]) {
-  // Check that the filenames are provided
-  if (argc != 3) {
-    std::cerr << "Usage: " << argv[0] << " <filename A> <filename B>" << std::endl;
+  // Check that the filename is provided
+  if (argc != 2) {
+    std::cerr << "Usage: " << argv[0] << " <filename>" << std::endl;
     return 1;
   }
 
   try {
     partA(argv[1]);
-    partB(argv[2]);
+    partB(argv[1]);
   } catch(const std::exception& exception) {
     std::cerr << exception.what() << std::endl;
     return 1;
