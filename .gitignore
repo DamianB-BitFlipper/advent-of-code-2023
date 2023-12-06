@@ -3,5 +3,6 @@
 compile_commands.json
 .cache
 
+# Ignore files that start with day, but not those that have a .cpp extension
 day*/day*
 !day*/day*.cpp
