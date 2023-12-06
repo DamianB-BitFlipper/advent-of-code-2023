@@ -1,3 +1,7 @@
 *.o
-*.in
-solution
+*.txt
+compile_commands.json
+.cache
+
+day*/day*
+!day*/day*.cpp

@@ -7,7 +7,8 @@ SRC_FILES_SUPPORT = $(wildcard ../advent_support/*.cpp)
 OBJ_FILES = $(SRC_FILES:.cpp=.o)
 OBJ_FILES_SUPPORT = $(SRC_FILES_SUPPORT:.cpp=.o)
 
-TARGET = solution
+# Target binary name is the same as the parent directory
+TARGET = $(notdir $(patsubst %/,%,$(CURDIR)))
 
 $(TARGET): $(OBJ_FILES) $(OBJ_FILES_SUPPORT)
 	$(CXX) $(CXXFLAGS) -o $@ $^
