@@ -24,3 +24,22 @@ std::vector<std::string> readFileAsLines(const std::string &filename) {
   // Move semantics makes this an OK thing to do
   return lines;
 }
+
+std::string readFileAsString(const std::string &filename) {
+  std::ifstream file{filename};
+
+  // Check if the file was opened correctly
+  if (!file.is_open()) {
+    throw std::runtime_error("Error opening file: " + filename);
+  }
+
+  // Read the entire file into a string
+  std::string fileContents{std::istreambuf_iterator<char>(file),
+                           std::istreambuf_iterator<char>()};
+
+  // Clean up
+  file.close();
+
+  // Move semantics makes this an OK thing to do
+  return fileContents;
+}
